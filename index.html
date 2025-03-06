@@ -3,11 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C Programming Task</title>
+    <title>CS XI - Computer Science Portal</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            background: #f8f9fa;
+        }
+
+        /* Course Header */
+        .hero {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        /* Code Section Styling */
+        .code-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .output-image {
+            width: 80%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        /* Course Grid */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        
+
+    <!-- Website Header -->
+    <section class="hero">
+        <h1>CS XI Computer Science</h1>
+        <p>Practical Programming & Theoretical Foundations</p>
+    </section>
+
+    <!-- Course Overview -->
+    <div class="course-grid">
+        <div class="code-section">
+            <h2>Course Curriculum</h2>
+            <ul>
+                <li>1. Computer System</li>
+                <li>2. Number System and Boolean Logic</li>
+                <li>9. C Programming</li>
+                <!-- Add all courses -->
+            </ul>
+        </div>
     </div>
+
+    <!-- Programming Section -->
+    <div class="code-section">
+        <h2>C Programming Examples</h2>
+
+        <!-- Example 1: Hello World -->
+        <h3>1. Hello World Program</h3>
+        <pre class="code-block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, CS XI Students!\n");
+    return 0;
+}</pre>
+        <img src="hello_output.png" class="output-image" alt="Hello World Output">
+
+        <!-- Example 2: Addition -->
+        <h3>2. Addition Program</h3>
+        <pre class="code-block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    printf("Sum: %d\n", a + b);
+    return 0;
+}</pre>
+        <img src="addition_output.png" class="output-image" alt="Addition Output">
+
+        <!-- Example 3: Factorial -->
+        <h3>3. Factorial Calculator</h3>
+        <pre class="code-block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int n, fact = 1;
+    printf("Enter number: ");
+    scanf("%d", &n);
+    
+    for(int i = 1; i <= n; i++)
+        fact *= i;
+    
+    printf("Factorial: %d\n", fact);
+    return 0;
+}</pre>
+        <img src="factorial_output.png" class="output-image" alt="Factorial Output">
+    </div>
+
+    <!-- Course Description -->
+    <div class="code-section">
+        <h2>About This Course</h2>
+        <p>Welcome to the Grade XI Computer Science program... (your full description here)</p>
+        <div class="code-block" style="background: #e3f2fd; color: #000;">
+            <strong>Key Features:</strong><br>
+            • Hands-on C programming<br>
+            • Web development basics<br>
+            • Cybersecurity fundamentals<br>
+            • Project-based learning
+        </div>
+    </div>
+
 </body>
 </html>
